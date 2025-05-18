@@ -434,7 +434,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.17, y: 0.12}
+  m_Size: {x: 0.1650199, y: 0.1065536}
   m_Direction: 1
 --- !u!95 &80778139
 Animator:
@@ -1908,6 +1908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cabb437cb76b384296fcc42212893e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personajeOriginal: {fileID: 80778134}
+  personajeNuevo: {fileID: 1916401208}
 --- !u!1 &1569029855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2296,7 @@ GameObject:
   - component: {fileID: 1916401210}
   - component: {fileID: 1916401209}
   - component: {fileID: 1916401213}
+  - component: {fileID: 1916401214}
   m_Layer: 0
   m_Name: PersonajeNuevo
   m_TagString: Untagged
@@ -2363,7 +2366,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.17, y: 0.12}
+  m_Size: {x: 0.16501985, y: 0.10655357}
   m_Direction: 1
 --- !u!212 &1916401211
 SpriteRenderer:
@@ -2457,6 +2460,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1916401214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916401208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8de3223b7d6be4cbae3f821edfd082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 1
+  controladorEscena: {fileID: 2072241576}
 --- !u!1 &2072241574
 GameObject:
   m_ObjectHideFlags: 0
