@@ -31,6 +31,11 @@ public class ControladorEscena : MonoBehaviour
     }
     public void Reiniciar()
     {
-        SceneManager.LoadScene(0);
+
+        if (logicaMenuPausa != null)
+        {
+            logicaMenuPausa.Reiniciar();
+        }
+
     }
 }

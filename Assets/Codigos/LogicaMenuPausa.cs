@@ -4,7 +4,7 @@ public class LogicaMenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
-    public ControladorEscena controladorEscena;
+    
     void Start()
     {
         
