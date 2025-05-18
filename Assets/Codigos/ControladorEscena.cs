@@ -4,10 +4,13 @@ using UnityEngine.SceneManagement;
 public class ControladorEscena : MonoBehaviour
 {
     public GameObject canvasPerdiste;
+    private LogicaMenuPausa logicaMenuPausa;
 
     void Start()
     {
         Time.timeScale = 1;
+        logicaMenuPausa = FindObjectOfType<LogicaMenuPausa>();
+
     }
 
 
@@ -20,6 +23,11 @@ public class ControladorEscena : MonoBehaviour
     {
         canvasPerdiste.SetActive(true);
         Time.timeScale = 0;
+
+        if (logicaMenuPausa != null)
+        {
+            logicaMenuPausa.OcultarBotonPausa();
+        }
     }
     public void Reiniciar()
     {
