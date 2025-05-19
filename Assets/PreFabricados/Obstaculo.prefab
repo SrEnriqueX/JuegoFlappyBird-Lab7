@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 6187036830303979428}
   m_Layer: 0
   m_Name: ObstaculoInferior
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   m_Size: {x: 0.26, y: 1.5903804}
   m_EdgeRadius: 0
 --- !u!1 &7253961222933661954
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 330829213998401841}
   m_Layer: 0
   m_Name: ObstaculoSuperior
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,6 +503,6 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   m_Size: {x: 0.26, y: 1.5903804}
   m_EdgeRadius: 0

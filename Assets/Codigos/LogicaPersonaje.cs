@@ -10,6 +10,8 @@ public class LogicaPersonaje : MonoBehaviour
 
     public AudioSource audioVolar;
 
+    public AudioSource audioGolpe;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +36,14 @@ public class LogicaPersonaje : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        controladorEscena.Perdiste();
+        //controladorEscena.Perdiste();
+        if (collision.gameObject.CompareTag("Obstaculo") || collision.gameObject.CompareTag("Suelo"))
+        {
+            controladorEscena.Perdiste();
+            audioGolpe.Play(); // Sonido único para todos.
+
+            // Opcional: Diferenciar efectos (ej: sonido distinto para suelo).
+            // if (collision.gameObject.CompareTag("Suelo")) audioSuelo.Play();
+        }
     }
 }
