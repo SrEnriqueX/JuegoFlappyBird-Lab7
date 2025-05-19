@@ -8,6 +8,8 @@ public class LogicaPersonaje : MonoBehaviour
 
     public ControladorEscena controladorEscena;
 
+    public AudioSource audioVolar;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,8 +20,14 @@ public class LogicaPersonaje : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            rb.linearVelocity = Vector2.up * velocidad;
-
+            /*rb.linearVelocity = Vector2.up * velocidad;
+            audioVolar.Play();*/
+            // Verifica si el juego est� activo (timeScale = 1 y canvasPerdiste desactivado).
+            if (Time.timeScale == 1 && !controladorEscena.canvasPerdiste.activeSelf)
+            {
+                rb.linearVelocity = Vector2.up * velocidad;
+                audioVolar.Play();
+            }
         }
 
     }

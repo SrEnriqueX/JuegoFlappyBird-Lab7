@@ -27,6 +27,7 @@ public class ControladorEscena : MonoBehaviour
         Time.timeScale = 0;
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         textoHighScoreMuerte.text = highScore.ToString(); // Mostrar récord.
+        FindObjectOfType<LogicaPersonaje>().enabled = false;
 
         LogicaHighScore.ActualizarHighScore(LogicaPuntaje.puntaje); // Guarda el récord.
         if (logicaMenuPausa != null)
