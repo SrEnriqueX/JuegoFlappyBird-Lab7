@@ -9,6 +9,20 @@ public class LogicaHighScore : MonoBehaviour
     {
         int highScore = PlayerPrefs.GetInt("HighScore", 0); // Si no existe, devuelve 0.
         textoHighScore.text = highScore.ToString();
+        ActualizarTextoHighScore();
+    }
+    // Método para resetear el High Score a 0.
+    public void ResetearHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore"); // Elimina la clave guardada.
+        PlayerPrefs.Save(); // Guarda los cambios.
+        ActualizarTextoHighScore(); // Actualiza el texto en pantalla.
+    }
+    // Actualiza el texto del High Score.
+    private void ActualizarTextoHighScore()
+    {
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        textoHighScore.text = highScore.ToString();
     }
     public static void ActualizarHighScore(int puntaje)
     {
