@@ -42,4 +42,9 @@ public class LogicaMenuPausa : MonoBehaviour
         botonPausa.SetActive(false);
         menuPausa.SetActive(false);  
     }
+    public void IrAlMenuPrincipal()
+    {
+        Time.timeScale = 1; 
+        SceneManager.LoadScene("MenuInicial"); 
+    }
 }
