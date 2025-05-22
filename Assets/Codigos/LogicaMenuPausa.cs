@@ -31,7 +31,7 @@ public class LogicaMenuPausa : MonoBehaviour
         Time.timeScale = 1;
         LogicaPuntaje.puntaje = 0;  // Resetear puntaje.
         // Reactivar personaje original y desactivar el nuevo.
-        FindObjectOfType<LogicaPuntaje>().personajeOriginal.SetActive(true);
+        //FindObjectOfType<LogicaPuntaje>().personajeOriginal.SetActive(true);
         FindObjectOfType<LogicaPuntaje>().personajeNuevo.SetActive(false);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
